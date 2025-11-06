@@ -1,47 +1,51 @@
-# backend gitignore
+# ================================================================= #
+#                            GENERAL                                #
+# ================================================================= #
 
+# Logs and temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.pem
 HELP.md
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+# Should not be committed to the repository
+.env*
+
+
+# ================================================================= #
+#                        BACKEND (Java)                             #
+# ================================================================= #
+
+# Build artifacts for Maven/Gradle
 target/
+build/
+dist/
+nbdist/
 .mvn/wrapper/maven-wrapper.jar
+
+# Exclusions for build folders within source directories
+# Allows keeping specific build artifacts if needed
 !**/src/main/**/target/
 !**/src/test/**/target/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
-.vscode/
 
+# ================================================================= #
+#                   FRONTEND (Node.js/Next.js)                      #
+# ================================================================= #
 
-
-# frontend gitignore
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-node_modules
-/.pnp
+# Dependencies
+node_modules/
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -49,32 +53,37 @@ node_modules
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
+# Build output, cache, and testing reports
+.next/
+out/
+coverage/
+.vercel/
 *.tsbuildinfo
 next-env.d.ts
+
+
+# ================================================================= #
+#                IDE & CODE EDITOR CONFIGURATION                    #
+# ================================================================= #
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### STS / Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+nbproject/private/
+.nb-gradle/
+
+### VS Code ###
+.vscode/

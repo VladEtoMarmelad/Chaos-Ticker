@@ -1,0 +1,1 @@
+export type RelevantSectors = "TECH"|"ENERGY"|"FINANCE";

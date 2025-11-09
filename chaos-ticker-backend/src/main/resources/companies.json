@@ -1,0 +1,12 @@
+{
+ "companies": [
+    {
+      "name": "SuperPuperEnergy",
+      "relevantSectors": ["TECH", "ENERGY"]
+    }, 
+    {
+      "name": "SuperPuperFincance",
+      "relevantSectors": ["FINANCE"]
+    }
+  ]
+}

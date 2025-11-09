@@ -3,7 +3,6 @@
     {
       "text": "received a large government order",
       "category": "FINANCIAL",
-      "magnitude": "MODERATE",
       "sharePriceImpact": 100,
       "relevantSectors": ["TECH", "ENERGY"]
     }
@@ -12,29 +11,25 @@
     {
       "text": "minor customer data breach",
       "category": "LEGAL",
-      "magnitude": "MINOR",
-      "sharePriceImpact": -100, 
+      "sharePriceImpact": -50, 
       "relevantSectors": ["TECH", "FINANCE"]
     },
     {
       "text": "critical defect has been discovered in the new processor.",
       "category": "TECHNOLOGICAL",
-      "magnitude": "CRITICAL",
       "sharePriceImpact": -100,
       "relevantSectors": ["TECH"]
     },
     {
       "text": "oil spill on a production platform",
       "category": "ECOLOGICAL",
-      "magnitude": "CRITICAL",
       "sharePriceImpact": -100,
       "relevantSectors": ["ENERGY"]
     },
     {
       "text": "an antitrust lawsuit has been filed against the company",
       "category": "LEGAL",
-      "magnitude": "MODERATE",
-      "sharePriceImpact": -100,
+      "sharePriceImpact": -50,
       "relevantSectors": []
     }
   ]

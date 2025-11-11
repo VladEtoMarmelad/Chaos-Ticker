@@ -3,7 +3,11 @@ package dev.chaos_ticker.engine.model;
 public enum RelevantSector {
   TECH ("TECH"),
   ENERGY ("ENERGY"),
-  FINANCE ("FINANCE");
+  FINANCE ("FINANCE"),
+  HEALTHCARE ("HEALTHCARE"),
+  RETAIL ("RETAIL"),
+  AUTOMOTIVE ("AUTOMOTIVE"),
+  MEDIA ("MEDIA");
 
   private String title;
 

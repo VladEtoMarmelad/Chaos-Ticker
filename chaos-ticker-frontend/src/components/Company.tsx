@@ -1,10 +1,8 @@
 import { Company as CompanyInterface} from "@/types/Company";
 import { Reason } from "@/types/Reason";
-import { Client } from "@stomp/stompjs";
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, TooltipItem } from 'chart.js';
 import { useRef, useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
-import SockJS from "sockjs-client";
 
 ChartJS.register(
   CategoryScale,
@@ -19,66 +17,72 @@ ChartJS.register(
 interface CompanyProps {
   company: CompanyInterface;
   options: any;
+  story: Reason[];
 }
 
-export const Company = ({company, options}: CompanyProps) => {
+export const Company = ({company, options, story}: CompanyProps) => {
   const sharePrice = useRef<number>(1000);
-  const [story, setStory] = useState<Reason[]>([]);
   const [labels, setLabels] = useState<string[]>([]);
+  const [prices, setPrices] = useState<number[]>([]);
 
   useEffect(() => {
-    const stompClient = new Client({
-      webSocketFactory: () => new SockJS("http://localhost:8080/ws-market"),
-      reconnectDelay: 5000
-    });
+    if (story.length > 0) {
+      const lastUpdate = story[story.length - 1];
+      sharePrice.current = sharePrice.current + lastUpdate.sharePriceImpact;
+      setPrices(prevPrices => [...prevPrices, sharePrice.current]);
+      setLabels(prevLabels => [...prevLabels, `${prevLabels.length}`]);
+    }
+  }, [story]); 
 
-    stompClient.onConnect = () => {
-      stompClient.subscribe("/topic/market-updates", (message) => {
-        const newUpdate: Reason = JSON.parse(message.body);
+  const chartOptions = {
+    ...options,
+    plugins: {
+      ...options.plugins,
+      tooltip: {
+        callbacks: {
+          label: (context: TooltipItem<"line">) => {
+            const index = context.dataIndex;
+            const price = context.parsed.y;
+            const lines = [];
 
-        if (newUpdate.affectedCompany.name === company.name) {
-          setLabels((prevLabels) => [...prevLabels, `${prevLabels.length}`])
-          sharePrice.current = sharePrice.current+newUpdate.sharePriceImpact
-          setStory((prevStory) => [...prevStory, {...newUpdate, newPrice: sharePrice.current}])
+            if (price !== null && price !== undefined) {
+              lines.push(`Price: ${price.toFixed(2)}`);
+            }
+
+            if (story[index]) {
+              lines.push(`Reason: ${story[index].text}`);
+            }
+            return lines;
+          }
         }
-      });
-    };
-
-    stompClient.onStompError = (frame) => {
-      console.error("Error on the broker's side: " + frame.headers["message"]);
-      console.error("Details: " + frame.body);
-    };
-
-    stompClient.activate();
-
-    return () => {
-      stompClient.deactivate();
-      console.log("The client has been deactivated.");
-    };
-  }, []); 
+      }
+    }
+  };
 
   const data = {
     labels,
     datasets: [
       {
         label: company.name,
-        data: labels.map((v, i) => {
-          if (story[i]) {
-            if (story[i].newPrice) {
-              return story[i].newPrice
-            } else {
-              return 0
-            }
-          } else {
-            return 0
+        data: prices,
+        segment: {
+          // This function is called for every segment of the line
+          borderColor: (ctx: any) => {
+            // If the price at the start of the segment is higher than the end, it's a decrease
+            if (ctx.p0.parsed.y > ctx.p1.parsed.y) return "red";
+
+            // If the price at the start is lower, it's an increase
+            if (ctx.p0.parsed.y < ctx.p1.parsed.y) return "green";
+
+            // Otherwise, no change
+            return "gray";
           }
-        }),
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        },
+        backgroundColor: "#c8c8c833",
         yAxisID: "y"
       }
     ]
   };
 
-  return <Line options={options} data={data} />
+  return <Line options={chartOptions} data={data} />
 }

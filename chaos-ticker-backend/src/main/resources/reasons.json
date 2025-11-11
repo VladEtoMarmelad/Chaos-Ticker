@@ -4,7 +4,37 @@
       "text": "received a large government order",
       "category": "FINANCIAL",
       "sharePriceImpact": 100,
-      "relevantSectors": ["TECH", "ENERGY"]
+      "relevantSectors": ["TECH", "ENERGY", "AUTOMOTIVE"]
+    },
+    {
+      "text": "announced a breakthrough in battery technology",
+      "category": "TECHNOLOGICAL",
+      "sharePriceImpact": 150,
+      "relevantSectors": ["TECH", "AUTOMOTIVE", "ENERGY"]
+    },
+    {
+      "text": "won a major patent lawsuit",
+      "category": "LEGAL",
+      "sharePriceImpact": 80,
+      "relevantSectors": ["TECH", "HEALTHCARE"]
+    },
+    {
+      "text": "reported record quarterly profits",
+      "category": "FINANCIAL",
+      "sharePriceImpact": 120,
+      "relevantSectors": []
+    },
+    {
+      "text": "a popular celebrity endorsed the company's product",
+      "category": "SOCIAL",
+      "sharePriceImpact": 70,
+      "relevantSectors": ["RETAIL", "MEDIA"]
+    },
+    {
+      "text": "new favorable trade agreement signed",
+      "category": "POLITICAL",
+      "sharePriceImpact": 90,
+      "relevantSectors": ["AUTOMOTIVE", "RETAIL"]
     }
   ],
   "negative": [
@@ -12,7 +42,7 @@
       "text": "minor customer data breach",
       "category": "LEGAL",
       "sharePriceImpact": -50, 
-      "relevantSectors": ["TECH", "FINANCE"]
+      "relevantSectors": ["TECH", "FINANCE", "RETAIL"]
     },
     {
       "text": "critical defect has been discovered in the new processor.",
@@ -29,8 +59,32 @@
     {
       "text": "an antitrust lawsuit has been filed against the company",
       "category": "LEGAL",
-      "sharePriceImpact": -50,
+      "sharePriceImpact": -80,
       "relevantSectors": []
+    },
+    {
+      "text": "CEO unexpectedly resigns amidst controversy",
+      "category": "OPERATIONAL",
+      "sharePriceImpact": -120,
+      "relevantSectors": []
+    },
+    {
+      "text": "factory workers announce a major strike",
+      "category": "SOCIAL",
+      "sharePriceImpact": -60,
+      "relevantSectors": ["AUTOMOTIVE", "RETAIL"]
+    },
+    {
+      "text": "drug trial for a new blockbuster medicine failed",
+      "category": "TECHNOLOGICAL",
+      "sharePriceImpact": -150,
+      "relevantSectors": ["HEALTHCARE"]
+    },
+    {
+      "text": "new environmental regulations impose heavy costs",
+      "category": "POLITICAL",
+      "sharePriceImpact": -70,
+      "relevantSectors": ["ENERGY", "AUTOMOTIVE"]
     }
   ]
 }

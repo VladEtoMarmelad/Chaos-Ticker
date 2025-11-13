@@ -8,36 +8,6 @@ import { Client } from "@stomp/stompjs";
 import SockJS from "sockjs-client";
 import axios from "axios";
 
-const options = {
-  responsive: true,
-  interaction: {
-    mode: "index" as const,
-    intersect: false,
-  },
-  stacked: false,
-  plugins: {
-    title: {
-      display: true,
-      text: "Chart.js Line Chart - Multi Axis",
-    },
-  },
-  scales: {
-    y: {
-      type: "linear" as const,
-      display: true,
-      position: "left" as const,
-    },
-    y1: {
-      type: "linear" as const,
-      display: true,
-      position: "right" as const,
-      grid: {
-        drawOnChartArea: false,
-      },
-    },
-  },
-};
-
 export default function Home() {
   const [companies, setCompanies] = useState<CompanyInterface[]|null>(null);
   const [marketUpdates, setMarketUpdates] = useState<Record<string, Reason[]>>({});
@@ -65,7 +35,7 @@ export default function Home() {
         if (newUpdate.affectedCompany?.name) {
           const companyName = newUpdate.affectedCompany.name;
           setMarketUpdates(prevUpdates => {
-            const existingUpdates = prevUpdates[companyName] || [];
+            const existingUpdates = prevUpdates[companyName] || [{"text": "Initial", "sharePriceImpact": 1000, "newPrice": 1000}];
             return {
               ...prevUpdates,
               [companyName]: [...existingUpdates, newUpdate]
@@ -96,7 +66,6 @@ export default function Home() {
         {companies.map((company: CompanyInterface, index: number) => 
           <Company 
             company={company} 
-            options={options} 
             key={index}
             story={marketUpdates[company.name] || []}
           />

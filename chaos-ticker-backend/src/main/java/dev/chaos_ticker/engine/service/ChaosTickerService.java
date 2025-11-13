@@ -21,14 +21,14 @@ public class ChaosTickerService {
   }
 
   public Reason getRandomTicker() {
-    // get negative or positive
     Random random = new Random();
-    boolean isNegative = random.nextBoolean();
 
     List<Reason> reasons;
     List<Company> companies = companyLoaderConfig.companyConfig().companies();
     Company randomCompany = companies.get(random.nextInt(companies.size()));
 
+    // get negative or positive
+    boolean isNegative = random.nextBoolean();
     if (isNegative) { // get negative reason
       reasons = reasonLoaderConfig.reasonConfig().negative();
     } else { // get positive reason
@@ -40,7 +40,7 @@ public class ChaosTickerService {
       reason.relevantSectors().stream().anyMatch(randomCompany.relevantSectors()::contains)
     ).toList();
 
-    Reason randomReason = filteredReasons.get(random.nextInt(reasons.size()));
+    Reason randomReason = filteredReasons.get(random.nextInt(filteredReasons.size()));
     Reason randomReasonWithCompany = new Reason(
       randomReason.text(),
       randomReason.category(),

@@ -1,90 +1,120 @@
 {
   "positive": [
     {
-      "text": "received a large government order",
-      "category": "FINANCIAL",
-      "sharePriceImpact": 100,
-      "relevantSectors": ["TECH", "ENERGY", "AUTOMOTIVE"]
-    },
-    {
-      "text": "announced a breakthrough in battery technology",
+      "text": "accidentally discovered a clean energy source while microwaving a burrito",
       "category": "TECHNOLOGICAL",
-      "sharePriceImpact": 150,
-      "relevantSectors": ["TECH", "AUTOMOTIVE", "ENERGY"]
+      "sharePriceImpact": 200,
+      "relevantSectors": ["ENERGY", "TECH"]
     },
     {
-      "text": "won a major patent lawsuit",
+      "text": "received a government grant to build a 'Death Star' (strictly for defense)",
+      "category": "FINANCIAL",
+      "sharePriceImpact": 150,
+      "relevantSectors": ["TECH", "AUTOMOTIVE"]
+    },
+    {
+      "text": "judge ruled that 'finders keepers' applies to the patent lawsuit",
       "category": "LEGAL",
-      "sharePriceImpact": 80,
+      "sharePriceImpact": 90,
       "relevantSectors": ["TECH", "HEALTHCARE"]
     },
     {
-      "text": "reported record quarterly profits",
+      "text": "quarterly earnings exceeded expectations because the accountant forgot a decimal point",
       "category": "FINANCIAL",
-      "sharePriceImpact": 120,
+      "sharePriceImpact": 130,
       "relevantSectors": []
     },
     {
-      "text": "a popular celebrity endorsed the company's product",
+      "text": "product went viral after a cat refused to sit on anything else",
       "category": "SOCIAL",
-      "sharePriceImpact": 70,
+      "sharePriceImpact": 85,
       "relevantSectors": ["RETAIL", "MEDIA"]
     },
     {
-      "text": "new favorable trade agreement signed",
+      "text": "CEO won a high-stakes poker game against a rival tech giant",
+      "category": "OPERATIONAL",
+      "sharePriceImpact": 60,
+      "relevantSectors": ["TECH", "FINANCE"]
+    },
+    {
+      "text": "lobbyists successfully classified pizza as a vegetable, reducing tax burdens",
       "category": "POLITICAL",
-      "sharePriceImpact": 90,
-      "relevantSectors": ["AUTOMOTIVE", "RETAIL"]
+      "sharePriceImpact": 95,
+      "relevantSectors": ["RETAIL"]
+    },
+    {
+      "text": "AI became sentient and optimized the supply chain by 400%",
+      "category": "TECHNOLOGICAL",
+      "sharePriceImpact": 180,
+      "relevantSectors": ["TECH", "AUTOMOTIVE", "RETAIL"]
+    },
+    {
+      "text": "company officially declared 'cool' by Gen Z on TikTok",
+      "category": "SOCIAL",
+      "sharePriceImpact": 110,
+      "relevantSectors": ["MEDIA", "RETAIL"]
     }
   ],
   "negative": [
     {
-      "text": "minor customer data breach",
+      "text": "intern accidentally leaked the entire user database on a Discord server",
       "category": "LEGAL",
-      "sharePriceImpact": -50, 
-      "relevantSectors": ["TECH", "FINANCE", "RETAIL"]
+      "sharePriceImpact": -60,
+      "relevantSectors": ["TECH", "FINANCE"]
     },
     {
-      "text": "critical defect has been discovered in the new processor.",
+      "text": "the new processor catches fire when asked to calculate 2 + 2",
       "category": "TECHNOLOGICAL",
-      "sharePriceImpact": -100,
+      "sharePriceImpact": -120,
       "relevantSectors": ["TECH"]
     },
     {
-      "text": "oil spill on a production platform",
+      "text": "dumped 'harmless glowing goo' into the local river",
       "category": "ECOLOGICAL",
-      "sharePriceImpact": -100,
+      "sharePriceImpact": -110,
       "relevantSectors": ["ENERGY"]
     },
     {
-      "text": "an antitrust lawsuit has been filed against the company",
+      "text": "sued by a potato chip company for trademark infringement on the shape 'oval'",
       "category": "LEGAL",
-      "sharePriceImpact": -80,
-      "relevantSectors": []
+      "sharePriceImpact": -70,
+      "relevantSectors": ["RETAIL"]
     },
     {
-      "text": "CEO unexpectedly resigns amidst controversy",
+      "text": "CEO resigned to pursue a career in interpretive dance",
       "category": "OPERATIONAL",
-      "sharePriceImpact": -120,
+      "sharePriceImpact": -130,
       "relevantSectors": []
     },
     {
-      "text": "factory workers announce a major strike",
+      "text": "workers on strike demand to be paid in cryptocurrency and pizza",
       "category": "SOCIAL",
-      "sharePriceImpact": -60,
+      "sharePriceImpact": -50,
       "relevantSectors": ["AUTOMOTIVE", "RETAIL"]
     },
     {
-      "text": "drug trial for a new blockbuster medicine failed",
+      "text": "clinical trials reveal the new drug causes patients to speak only in rhyming couplets",
       "category": "TECHNOLOGICAL",
-      "sharePriceImpact": -150,
+      "sharePriceImpact": -140,
       "relevantSectors": ["HEALTHCARE"]
     },
     {
-      "text": "new environmental regulations impose heavy costs",
+      "text": "government banned the product for being 'too addictive for human consumption'",
       "category": "POLITICAL",
-      "sharePriceImpact": -70,
-      "relevantSectors": ["ENERGY", "AUTOMOTIVE"]
+      "sharePriceImpact": -90,
+      "relevantSectors": ["RETAIL", "HEALTHCARE"]
+    },
+    {
+      "text": "CFO bet the entire quarterly budget on a horse named 'Bankruptcy'",
+      "category": "FINANCIAL",
+      "sharePriceImpact": -160,
+      "relevantSectors": ["FINANCE"]
+    },
+    {
+      "text": "server farm destroyed by a horde of angry raccoons",
+      "category": "OPERATIONAL",
+      "sharePriceImpact": -100,
+      "relevantSectors": ["TECH", "MEDIA"]
     }
   ]
 }

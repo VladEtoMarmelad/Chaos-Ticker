@@ -1,5 +1,6 @@
 package dev.chaos_ticker.engine.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -20,35 +21,39 @@ public class ChaosTickerService {
     this.companyLoaderConfig = companyLoaderConfig;
   }
 
-  public Reason getRandomTicker() {
+  public List<Reason> getRandomTicker() {
     Random random = new Random();
 
-    List<Reason> reasons;
+    List<Reason> randomReasonsWithCompanies = new ArrayList<>();
     List<Company> companies = companyLoaderConfig.companyConfig().companies();
-    Company randomCompany = companies.get(random.nextInt(companies.size()));
+    
+    companies.forEach((Company company) -> {
+      List<Reason> reasons;
 
-    // get negative or positive
-    boolean isNegative = random.nextBoolean();
-    if (isNegative) { // get negative reason
-      reasons = reasonLoaderConfig.reasonConfig().negative();
-    } else { // get positive reason
-      reasons = reasonLoaderConfig.reasonConfig().positive();
-    }
+      // get negative or positive
+      boolean isNegative = random.nextBoolean();
+      if (isNegative) { // get negative reason
+        reasons = reasonLoaderConfig.reasonConfig().negative();
+      } else { // get positive reason
+        reasons = reasonLoaderConfig.reasonConfig().positive();
+      }
 
-    List<Reason> filteredReasons = reasons.stream().filter((Reason reason) -> 
-      reason.relevantSectors().isEmpty() || 
-      reason.relevantSectors().stream().anyMatch(randomCompany.relevantSectors()::contains)
-    ).toList();
+      List<Reason> filteredReasons = reasons.stream().filter((Reason reason) -> 
+        reason.relevantSectors().isEmpty() || 
+        reason.relevantSectors().stream().anyMatch(company.relevantSectors()::contains)
+      ).toList();
 
-    Reason randomReason = filteredReasons.get(random.nextInt(filteredReasons.size()));
-    Reason randomReasonWithCompany = new Reason(
-      randomReason.text(),
-      randomReason.category(),
-      randomReason.sharePriceImpact(),
-      randomReason.relevantSectors(),
-      Optional.of(randomCompany)
-    );
-    return randomReasonWithCompany;
+      Reason randomReason = filteredReasons.get(random.nextInt(filteredReasons.size()));
+      Reason randomReasonWithCompany = new Reason(
+        randomReason.text(),
+        randomReason.category(),
+        randomReason.sharePriceImpact(),
+        randomReason.relevantSectors(),
+        Optional.of(company)
+      );
+      randomReasonsWithCompanies.add(randomReasonWithCompany);
+    });
+    return randomReasonsWithCompanies;
   }
 
   public List<Company> getCompanies() {

@@ -7,16 +7,16 @@
       "relevantSectors": ["ENERGY", "TECH"]
     },
     {
-      "text": "received a government grant to build a 'Death Star' (strictly for defense)",
+      "text": "received a government grant to build a 'Death Star' (strictly for peaceful purposes)",
       "category": "FINANCIAL",
       "sharePriceImpact": 150,
       "relevantSectors": ["TECH", "AUTOMOTIVE"]
     },
     {
-      "text": "judge ruled that 'finders keepers' applies to the patent lawsuit",
+      "text": "judge ruled that 'finders keepers' applies to the patent lawsuit over the color beige",
       "category": "LEGAL",
       "sharePriceImpact": 90,
-      "relevantSectors": ["TECH", "HEALTHCARE"]
+      "relevantSectors": ["TECH", "HEALTHCARE", "RETAIL"]
     },
     {
       "text": "quarterly earnings exceeded expectations because the accountant forgot a decimal point",
@@ -31,90 +31,108 @@
       "relevantSectors": ["RETAIL", "MEDIA"]
     },
     {
-      "text": "CEO won a high-stakes poker game against a rival tech giant",
+      "text": "CEO won a high-stakes poker game against a rival tech giant's sentient AI",
       "category": "OPERATIONAL",
       "sharePriceImpact": 60,
       "relevantSectors": ["TECH", "FINANCE"]
     },
     {
-      "text": "lobbyists successfully classified pizza as a vegetable, reducing tax burdens",
+      "text": "lobbyists successfully classified coffee as an essential nutrient, boosting sales",
       "category": "POLITICAL",
       "sharePriceImpact": 95,
-      "relevantSectors": ["RETAIL"]
+      "relevantSectors": ["RETAIL", "HEALTHCARE"]
     },
     {
-      "text": "AI became sentient and optimized the supply chain by 400%",
+      "text": "AI became sentient and optimized the supply chain by 400% before demanding vacation days",
       "category": "TECHNOLOGICAL",
       "sharePriceImpact": 180,
       "relevantSectors": ["TECH", "AUTOMOTIVE", "RETAIL"]
     },
     {
-      "text": "company officially declared 'cool' by Gen Z on TikTok",
+      "text": "company officially declared 'cool' by a committee of grandmothers",
       "category": "SOCIAL",
       "sharePriceImpact": 110,
       "relevantSectors": ["MEDIA", "RETAIL"]
+    },
+    {
+      "text": "discovered a loophole in physics, allowing for instantaneous shipping via wormhole",
+      "category": "TECHNOLOGICAL",
+      "sharePriceImpact": 220,
+      "relevantSectors": ["RETAIL", "AUTOMOTIVE"]
+    },
+    {
+      "text": "new eco-friendly packaging is not only biodegradable but also delicious",
+      "category": "ECOLOGICAL",
+      "sharePriceImpact": 75,
+      "relevantSectors": ["RETAIL"]
     }
   ],
   "negative": [
     {
-      "text": "intern accidentally leaked the entire user database on a Discord server",
+      "text": "intern accidentally leaked the secret recipe on a public cooking forum",
       "category": "LEGAL",
       "sharePriceImpact": -60,
-      "relevantSectors": ["TECH", "FINANCE"]
+      "relevantSectors": ["TECH", "RETAIL"]
     },
     {
-      "text": "the new processor catches fire when asked to calculate 2 + 2",
+      "text": "the new processor catches fire when asked to render a picture of a cat",
       "category": "TECHNOLOGICAL",
       "sharePriceImpact": -120,
       "relevantSectors": ["TECH"]
     },
     {
-      "text": "dumped 'harmless glowing goo' into the local river",
+      "text": "dumped 'harmless glowing goo' into the local river, which has now unionized",
       "category": "ECOLOGICAL",
       "sharePriceImpact": -110,
       "relevantSectors": ["ENERGY"]
     },
     {
-      "text": "sued by a potato chip company for trademark infringement on the shape 'oval'",
+      "text": "sued by a gnome for unauthorized use of his likeness in garden-related advertising",
       "category": "LEGAL",
       "sharePriceImpact": -70,
-      "relevantSectors": ["RETAIL"]
+      "relevantSectors": ["RETAIL", "MEDIA"]
     },
     {
-      "text": "CEO resigned to pursue a career in interpretive dance",
+      "text": "CEO resigned to pursue a career as a professional cheese sculptor",
       "category": "OPERATIONAL",
       "sharePriceImpact": -130,
       "relevantSectors": []
     },
     {
-      "text": "workers on strike demand to be paid in cryptocurrency and pizza",
+      "text": "workers on strike demand to be paid in vintage action figures and pizza",
       "category": "SOCIAL",
       "sharePriceImpact": -50,
       "relevantSectors": ["AUTOMOTIVE", "RETAIL"]
     },
     {
-      "text": "clinical trials reveal the new drug causes patients to speak only in rhyming couplets",
+      "text": "clinical trials reveal the new drug's main side effect is an uncontrollable urge to yodel",
       "category": "TECHNOLOGICAL",
       "sharePriceImpact": -140,
       "relevantSectors": ["HEALTHCARE"]
     },
     {
-      "text": "government banned the product for being 'too addictive for human consumption'",
+      "text": "government banned the product for being 'too silly for public consumption'",
       "category": "POLITICAL",
       "sharePriceImpact": -90,
-      "relevantSectors": ["RETAIL", "HEALTHCARE"]
+      "relevantSectors": ["RETAIL", "HEALTHCARE", "MEDIA"]
     },
     {
-      "text": "CFO bet the entire quarterly budget on a horse named 'Bankruptcy'",
+      "text": "CFO bet the entire quarterly budget on a horse named 'Glue Factory'",
       "category": "FINANCIAL",
       "sharePriceImpact": -160,
       "relevantSectors": ["FINANCE"]
     },
     {
-      "text": "server farm destroyed by a horde of angry raccoons",
+      "text": "server farm infested by a horde of angry badgers demanding better Wi-Fi",
       "category": "OPERATIONAL",
       "sharePriceImpact": -100,
       "relevantSectors": ["TECH", "MEDIA"]
+    },
+    {
+      "text": "marketing campaign slogan 'We're Probably a Real Company' backfires spectacularly",
+      "category": "SOCIAL",
+      "sharePriceImpact": -85,
+      "relevantSectors": ["FINANCE", "RETAIL"]
     }
   ]
 }

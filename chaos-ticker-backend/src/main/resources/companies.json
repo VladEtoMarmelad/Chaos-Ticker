@@ -1,12 +1,40 @@
 {
- "companies": [
+  "companies": [
     {
-      "name": "SuperPuperEnergy",
-      "relevantSectors": ["TECH", "ENERGY"]
-    }, 
-    {
-      "name": "SuperPuperFincance",
+      "name": "Infinite Money Glitch Capital",
       "relevantSectors": ["FINANCE"]
+    },
+    {
+      "name": "Pixelated Dreams Inc.",
+      "relevantSectors": ["TECH", "MEDIA"]
+    },
+    {
+      "name": "GigaWatt Juice Co.",
+      "relevantSectors": ["ENERGY"]
+    },
+    {
+      "name": "Questionable Cures Pharma",
+      "relevantSectors": ["HEALTHCARE"]
+    },
+    {
+      "name": "Impulse Buys R Us",
+      "relevantSectors": ["RETAIL"]
+    },
+    {
+      "name": "Rocket-Powered Unicycles",
+      "relevantSectors": ["AUTOMOTIVE", "TECH"]
+    },
+    {
+      "name": "Cat-Vidz Network",
+      "relevantSectors": ["MEDIA"]
+    },
+    {
+      "name": "Probably-A-Pyramid Scheme Holdings",
+      "relevantSectors": ["FINANCE", "RETAIL"]
+    },
+    {
+      "name": "Self-Driving Sofas",
+      "relevantSectors": ["AUTOMOTIVE", "RETAIL", "TECH"]
     }
   ]
 }
